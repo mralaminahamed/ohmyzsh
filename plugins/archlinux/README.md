@@ -32,6 +32,8 @@ plugins=(... archlinux)
 | pacfiles     | `pacman -F`                            | Search package file names for matching strings                   |
 | pacls        | `pacman -Ql`                           | List files in a package                                          |
 | pacown       | `pacman -Qo`                           | Show which package owns a file                                   |
+| paclun       | `sudo pacman -Yc`                      | Remove unneeded installed packages                               |
+| paclf        | `sudo pacman -Scc`                     | Remove cache directories                                         |
 | upgrade[²](#f2) | `sudo pacman -Syu`                  | Sync with repositories before upgrading packages                 |
 
 | Function       | Description                                               |
@@ -73,6 +75,8 @@ upgrades were available. Use `pacman -Que` instead.
 | auupd   | `sudo aura -Sy`                                 | Update and refresh local package, ABS and AUR databases                 |
 | auupg   | `sudo sh -c "aura -Syu              && aura -Au"` | Sync with repositories before upgrading all packages (from AUR too)   |
 | ausu    | `sudo sh -c "aura -Syu --no-confirm && aura -Au --no-confirm"` | Same as `auupg`, but without confirmation                |
+| auclun  | `sudo aura -Yc`                                 | Remove unneeded installed packages                                      |
+| auclf   | `sudo aura -Scc`                                | Remove cache directories                                                |
 | upgrade[²](#f2) | `sudo aura -Syu`                        | Sync with repositories before upgrading packages                        |
 
 | Function        | Description                                                         |
@@ -99,6 +103,8 @@ upgrades were available. Use `pacman -Que` instead.
 | paupd   | `pacaur -Sy`                      | Update and refresh local package, ABS and AUR databases             |
 | paupg   | `pacaur -Syua`                    | Sync with repositories before upgrading all packages (from AUR too) |
 | pasu    | `pacaur -Syua --no-confirm`       | Same as `paupg`, but without confirmation                           |
+| paclun  | `pacaur -Yc`                      | Remove unneeded installed packages                                  |
+| paclf   | `pacaur -Scc`                     | Remove cache directories                                            |
 | upgrade[²](#f2) | `pacaur -Syu`             | Sync with repositories before upgrading packages                    |
 
 #### Trizen
@@ -121,6 +127,8 @@ upgrades were available. Use `pacman -Que` instead.
 | trupd   | `trizen -Sy`                      | Update and refresh local package, ABS and AUR databases             |
 | trupg   | `trizen -Syua`                    | Sync with repositories before upgrading all packages (from AUR too) |
 | trsu    | `trizen -Syua --no-confirm`       | Same as `trupg`, but without confirmation                           |
+| trclun  | `trizen -Yc`                      | Remove unneeded installed packages                                  |
+| trclf   | `trizen -Scc`                     | Remove cache directories                                            |
 | upgrade[²](#f2) | `trizen -Syu`             | Sync with repositories before upgrading packages                    |
 
 #### Yaourt[¹](#f1)
@@ -143,8 +151,8 @@ upgrades were available. Use `pacman -Que` instead.
 | yaupd   | `yaourt -Sy`                      | Update and refresh local package, ABS and AUR databases             |
 | yaupg   | `yaourt -Syua`                    | Sync with repositories before upgrading all packages (from AUR too) |
 | yasu    | `yaourt -Syua --no-confirm`       | Same as `yaupg`, but without confirmation                           |
-| yaclun  | `yaourt -Yc`                      | Remove unneeded installed packages                                |
-| yaclf   | `yaourt -Scc`                     | Remove cache directories                                          |
+| yaclun  | `yaourt -Yc`                      | Remove unneeded installed packages                                  |
+| yaclf   | `yaourt -Scc`                     | Remove cache directories                                            |
 | upgrade[²](#f2) | `yaourt -Syu`             | Sync with repositories before upgrading packages                    |
 
 #### Yay[¹](#f1)
@@ -200,3 +208,4 @@ whether the package manager is installed, checked in the following order:
 - ornicar - thibault.duplessis@gmail.com
 - Ybalrid (Arthur Brainville) - ybalrid@ybalrid.info
 - Jeff M. Hubbard - jeffmhubbard@gmail.com
+- Al-Amin Ahamed - alamin.rohita@hotmail.com

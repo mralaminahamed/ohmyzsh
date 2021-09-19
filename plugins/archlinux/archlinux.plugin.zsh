@@ -21,6 +21,8 @@ alias pacfiles='pacman -F'
 alias pacls='pacman -Ql'
 alias pacown='pacman -Qo'
 alias pacupd="sudo pacman -Sy"
+alias paclun='sudo pacman -Yc'
+alias paclf='sudo pacman -Scc'
 alias upgrade='sudo pacman -Syu'
 
 function paclist() {
@@ -105,6 +107,8 @@ if (( $+commands[aura] )); then
   alias auupd="sudo aura -Sy"
   alias auupg='sudo sh -c "aura -Syu              && aura -Au"'
   alias ausu='sudo  sh -c "aura -Syu --no-confirm && aura -Au --no-confirm"'
+  alias auclun='sudo aura -Yc'
+  alias auclf='sudo aura -Scc'
   alias upgrade='sudo aura -Syu'
 
   # extra bonus specially for aura
@@ -130,6 +134,8 @@ if (( $+commands[pacaur] )); then
   alias painsd='pacaur -S --asdeps'
   alias pamir='pacaur -Syy'
   alias paupd="pacaur -Sy"
+  alias paclun='pacaur -Yc'
+  alias paclf='pacaur -Scc'
   alias upgrade='pacaur -Syu'
 fi
 
@@ -150,6 +156,8 @@ if (( $+commands[trizen] )); then
   alias trinsd='trizen -S --asdeps'
   alias trmir='trizen -Syy'
   alias trupd="trizen -Sy"
+  alias trclun='trizen -Yc'
+  alias trclf='trizen -Scc'
   alias upgrade='trizen -Syu'
 fi
 
@@ -170,8 +178,8 @@ if (( $+commands[yaourt] )); then
   alias yainsd='yaourt -S --asdeps'
   alias yamir='yaourt -Syy'
   alias yaupd="yaourt -Sy"
-  alias yacun='yaourt -Yc'
-  alias yacf='yaourt -Scc'
+  alias yaclun='yaourt -Yc'
+  alias yaclf='yaourt -Scc'
   alias upgrade='yaourt -Syu'
 fi
 
